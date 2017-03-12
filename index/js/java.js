@@ -32,6 +32,21 @@ $(document).ready(function(){
 			$('#go-top').hide(500);
 		}
 	});
+
+	$('.cover a').click(function(e){
+
+		e.preventDefault();
+    
+	    var url = $(this).prop('href');
+	    var image = $('<img>');
+	    image.prop('src', url);
+	    
+	    $('.modal').html(image);
+		$('.mod').fadeIn('800');
+	});
+	$('.mod').click(function(e){
+		$(this).fadeOut('400');
+	});
   
   $('#go-top').click(function(e){
     
